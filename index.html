@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-5 p-4 bg-white shadow rounded">
+        <h3 class="text-center mb-4">Fill the Form</h3>
+        <form id="idForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="number" class="form-label">Number:</label>
+            <input type="text" class="form-control" id="number" placeholder="Enter Number" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="designation" class="form-label">Designation:</label>
+            <input type="text" class="form-control" id="designation" placeholder="Enter Designation" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="joiningDate" class="form-label">Date of Joining:</label>
+            <input type="date" class="form-control" id="joiningDate" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="companyName" class="form-label">Company Name:</label>
+            <input type="text" class="form-control" id="companyName" placeholder="Enter Company Name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="slogan" class="form-label">Slogan:</label>
+            <input type="text" class="form-control" id="slogan" placeholder="Enter Slogan" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="image" class="form-label">Upload Profile Image:</label>
+            <input type="file" class="form-control" id="image" accept="image/*" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="companyLogo" class="form-label">Upload Company Logo:</label>
+            <input type="file" class="form-control" id="companyLogo" accept="image/*" required>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary w-48">Generate ID Card</button>
+            <button type="button" class="btn btn-secondary w-48" id="clearBtn">Clear</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-5 p-4 bg-white shadow rounded mt-4 mt-md-0">
+        <div class="d-grid mt-3">
+            <button class="btn btn-success" id="printBtn">Print ID Card</button>
+          </div>
+          
+        <h3 class="text-center mb-4">Generated ID Card</h3>
+        <div class="card mx-auto text-center p-3" style="width: 80%; max-width: 350px;">
+          <div class="d-flex align-items-center justify-content-center mb-3">
+            <img id="companyLogoPreview" src="" alt="Company Logo" style="width: 70px; height: 70px; object-fit: contain; border: 1px;">
+            <div class="text-start ms-3">
+              <h5 id="displayCompanyName" class="mb-1"></h5>
+              <small id="displaySlogan" class="text-muted"></small>
+            </div>
+          </div>
+          <img id="previewImage" src="" alt="Profile Image" class="rounded-circle mx-auto mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+          <h4 id="displayName" class="mb-2"></h4>
+          <p id="displayDesignation" class="mb-1"></p>
+          <p id="displayEmail" class="text-muted mb-1"></p>
+          <p id="displayNumber" class="text-muted mb-1"></p>
+          <p id="displayJoiningDate" class="text-muted"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
